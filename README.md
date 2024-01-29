@@ -35,6 +35,49 @@ catkin_make
 
 ### Files structure
 ````
+launch
+│   └── bring_up_mk2.launch
+├── mk2
+│   ├── CMakeLists.txt
+│   ├── config
+│   ├── export.log
+│   ├── launch
+│   ├── meshes
+│   ├── package.xml
+│   ├── rviz
+│   └── urdf
+├── mr_communication
+│   ├── CMakeLists.txt
+│   ├── include
+│   ├── launch
+│   ├── package.xml
+│   └── src
+├── mr_dynamic
+│   ├── CMakeLists.txt
+│   ├── cfg
+│   ├── launch
+│   ├── package.xml
+│   ├── scripts
+│   └── src
+├── mr_graphs
+│   ├── CMakeLists.txt
+│   ├── launch
+│   ├── package.xml
+│   └── scripts
+├── mr_joint_controller
+│   ├── 2024-01-24-20-05-02.bag
+│   ├── CMakeLists.txt
+│   ├── launch
+│   ├── msg
+│   ├── package.xml
+│   ├── scripts
+│   └── src
+└── mr_waypoints
+    ├── CMakeLists.txt
+    ├── build
+    ├── launch
+    ├── package.xml
+    └── src
 
 
 ````
@@ -42,7 +85,8 @@ catkin_make
 ### Launch
 
 ````
-roslaunch turtlebot3_control bringup_robot.launch
+cd launch
+roslaunch bring_up_mk2.launch
 ````
 
 ### Dynamic Reconfigure Parameters
@@ -56,3 +100,8 @@ rosrun rqt_reconfigure rqt_reconfigure
 
 ### Graphs visualization
 To visualize the robot pose, heading, velocities and accelerations during the navigation run. (launchs by default)
+
+````
+rosrun mr_graphs robot_arm_graph.py
+
+````
