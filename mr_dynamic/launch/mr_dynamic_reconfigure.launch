@@ -1,0 +1,5 @@
+<!-- Launch dynamic reconfigure parameters -->
+
+<launch>
+    <node name="mr_dynamic_node" pkg="mr_dynamic" type="mr_dynamic_node" />
+</launch>

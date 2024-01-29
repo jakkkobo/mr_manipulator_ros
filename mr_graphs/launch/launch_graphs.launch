@@ -1,0 +1,5 @@
+<!-- Launch mr_graphs_node based on matplotlib -->
+<launch>
+    <node  name="mr_graphs_node" pkg="mr_graphs" type="robot_arm_graph.py" output="screen">
+    </node>
+</launch>

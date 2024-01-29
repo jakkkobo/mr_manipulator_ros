@@ -1,0 +1,6 @@
+<!-- Launhc waypoints node -->
+<launch>
+    <node name="waypoints_node" pkg="mr_waypoints" type="waypoints_node" output="screen">
+    </node>
+</launch>
+

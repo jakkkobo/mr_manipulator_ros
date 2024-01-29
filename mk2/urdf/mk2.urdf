@@ -1,0 +1,1054 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="mk2">
+  <link
+    name="footprint_link">
+    <inertial>
+      <origin
+        xyz="-0.027264 -8.2103E-05 0.029424"
+        rpy="0 0 0" />
+      <mass
+        value="0.20065" />
+      <inertia
+        ixx="0.00012071"
+        ixy="-6.3675E-08"
+        ixz="-9.1455E-06"
+        iyy="0.00026369"
+        iyz="-1.5044E-09"
+        izz="0.00033032" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/footprint_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0 0.1 0.9 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/footprint_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00045062 -0.00056704 0.032328"
+        rpy="0 0 0" />
+      <mass
+        value="0.2946" />
+      <inertia
+        ixx="0.00026764"
+        ixy="-2.8396E-06"
+        ixz="7.0796E-06"
+        iyy="0.00026231"
+        iyz="7.6901E-06"
+        izz="0.00023501" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0 0.1 0.9 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base"
+    type="continuous">
+    <origin
+      xyz="0 0 0.051"
+      rpy="0 0 0" />
+    <parent
+      link="footprint_link" />
+    <child
+      link="base_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="L1_JT_link">
+    <inertial>
+      <origin
+        xyz="-1.0045E-14 -0.0095522 0.003"
+        rpy="0 0 0" />
+      <mass
+        value="0.06105" />
+      <inertia
+        ixx="1.5625E-05"
+        ixy="9.6292E-23"
+        ixz="-6.8219E-21"
+        iyy="9.0259E-06"
+        iyz="4.0394E-22"
+        izz="1.0544E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/L1_JT_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/L1_JT_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L1_JT"
+    type="fixed">
+    <origin
+      xyz="0 0.00299999999999998 0.0732499999999999"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="L1_JT_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="L1_link">
+    <inertial>
+      <origin
+        xyz="-0.0055614 0.057974 0.0060613"
+        rpy="0 0 0" />
+      <mass
+        value="0.071815" />
+      <inertia
+        ixx="0.00015118"
+        ixy="2.3184E-05"
+        ixz="1.8014E-07"
+        iyy="1.6103E-05"
+        iyz="8.6942E-07"
+        izz="0.00015336" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/L1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0 0.1 0.9 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/L1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L1"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.00149999999999991"
+      rpy="0 0 0" />
+    <parent
+      link="L1_JT_link" />
+    <child
+      link="L1_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="L2_JT_link">
+    <inertial>
+      <origin
+        xyz="-0.075 0.017741 -0.0030613"
+        rpy="0 0 0" />
+      <mass
+        value="0.071815" />
+      <inertia
+        ixx="1.6103E-05"
+        ixy="2.3184E-05"
+        ixz="-8.6942E-07"
+        iyy="0.00015118"
+        iyz="-1.8014E-07"
+        izz="0.00015336" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/L2_JT_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0 0.1 0.9 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/L2_JT_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L2_JT"
+    type="fixed">
+    <origin
+      xyz="-0.0233024298564636 0.132973669434157 0.003"
+      rpy="-3.14159265358979 0 1.5707963267949" />
+    <parent
+      link="L1_link" />
+    <child
+      link="L2_JT_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="L2_link">
+    <inertial>
+      <origin
+        xyz="0.012441 0.037081 0.013216"
+        rpy="0 0 0" />
+      <mass
+        value="0.038874" />
+      <inertia
+        ixx="0.00013873"
+        ixy="6.2071E-07"
+        ixz="4.7085E-07"
+        iyy="5.5345E-06"
+        iyz="4.4212E-06"
+        izz="0.00013901" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/L2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0 0.1 0.9 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/L2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L2"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.00799999999999998"
+      rpy="0 0 0" />
+    <parent
+      link="L2_JT_link" />
+    <child
+      link="L2_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="L3_JT_link">
+    <inertial>
+      <origin
+        xyz="-0.10992 0.012441 0.0037842"
+        rpy="0 0 0" />
+      <mass
+        value="0.038874" />
+      <inertia
+        ixx="5.5345E-06"
+        ixy="6.2071E-07"
+        ixz="-4.4212E-06"
+        iyy="0.00013873"
+        iyz="-4.7085E-07"
+        izz="0.00013901" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/L3_JT_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0 0.1 0.9 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/L3_JT_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L3_JT_joint"
+    type="fixed">
+    <origin
+      xyz="0 0.147 0.017"
+      rpy="-3.14159265358979 0 1.5707963267949" />
+    <parent
+      link="L2_link" />
+    <child
+      link="L3_JT_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="L3_link">
+    <inertial>
+      <origin
+        xyz="0.025333 0.0029402 -0.0030211"
+        rpy="0 0 0" />
+      <mass
+        value="0.031957" />
+      <inertia
+        ixx="6.0748E-06"
+        ixy="-2.7192E-06"
+        ixz="-3.0049E-07"
+        iyy="7.9721E-06"
+        iyz="-3.9764E-07"
+        izz="1.1212E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/L3_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0 0.1 0.9 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/L3_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L3_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0.0119999999999995"
+      rpy="0 0 0" />
+    <parent
+      link="L3_JT_link" />
+    <child
+      link="L3_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="L4_link">
+    <inertial>
+      <origin
+        xyz="-0.0045763 0.0085211 0.003018"
+        rpy="0 0 0" />
+      <mass
+        value="0.031957" />
+      <inertia
+        ixx="6.0748E-06"
+        ixy="3.0049E-07"
+        ixz="-2.7192E-06"
+        iyy="1.1212E-05"
+        iyz="3.9764E-07"
+        izz="7.9721E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/L4_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0 0.1 0.9 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/L4_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L4_joint"
+    type="fixed">
+    <origin
+      xyz="0.029908878399012 -7.78200046105404E-05 0.00550000000000002"
+      rpy="-1.5707963267949 0 0" />
+    <parent
+      link="L3_link" />
+    <child
+      link="L4_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="L5_link">
+    <inertial>
+      <origin
+        xyz="-0.0025219 2.8506E-06 0.0094783"
+        rpy="0 0 0" />
+      <mass
+        value="0.0058354" />
+      <inertia
+        ixx="2.3257E-07"
+        ixy="-2.5675E-11"
+        ixz="-2.6247E-09"
+        iyy="3.4227E-07"
+        iyz="-3.6246E-13"
+        izz="4.1905E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/L5_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89216 0.81961 0.83333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/L5_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L5_joint"
+    type="fixed">
+    <origin
+      xyz="0.000430531903176545 0.00874999999999942 -0.0304969611974757"
+      rpy="0 0 0" />
+    <parent
+      link="L4_link" />
+    <child
+      link="L5_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="auxiliar_2_link">
+    <inertial>
+      <origin
+        xyz="-0.020431 0.00055878 -0.0054372"
+        rpy="0 0 0" />
+      <mass
+        value="0.012221" />
+      <inertia
+        ixx="6.3445E-07"
+        ixy="1.0831E-07"
+        ixz="-3.4124E-07"
+        iyy="5.295E-06"
+        iyz="7.3328E-09"
+        izz="5.5487E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/auxiliar_2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0 0.1 0.9 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/auxiliar_2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="auxiliar_2_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.00995000000000003"
+      rpy="0 0 0" />
+    <parent
+      link="L1_JT_link" />
+    <child
+      link="auxiliar_2_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="auxiliar_2_fixed_link">
+    <inertial>
+      <origin
+        xyz="0.036569 0.00055878 -0.0054372"
+        rpy="0 0 0" />
+      <mass
+        value="0.012221" />
+      <inertia
+        ixx="6.3445E-07"
+        ixy="1.0831E-07"
+        ixz="-3.4124E-07"
+        iyy="5.295E-06"
+        iyz="7.3328E-09"
+        izz="5.5487E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/auxiliar_2_fixed_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0 0.1 0.9 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/auxiliar_2_fixed_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="auxiliar_2_fixed_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0569999999999997 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="auxiliar_2_link" />
+    <child
+      link="auxiliar_2_fixed_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="auxiliar_21_joint_link">
+    <inertial>
+      <origin
+        xyz="-0.012683 0.07233 -0.0026782"
+        rpy="0 0 0" />
+      <mass
+        value="0.0059141" />
+      <inertia
+        ixx="1.2937E-05"
+        ixy="2.255E-06"
+        ixz="-2.978E-08"
+        iyy="4.6268E-07"
+        iyz="1.7058E-07"
+        izz="1.3347E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/auxiliar_21_joint_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0 0.1 0.9 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/auxiliar_21_joint_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="auxiliar_21_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.00550000000000005"
+      rpy="0 0 0" />
+    <parent
+      link="auxiliar_2_fixed_link" />
+    <child
+      link="auxiliar_21_joint_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="auxiliar_21_fixed_link">
+    <inertial>
+      <origin
+        xyz="-0.080559 -0.0082703 0.049128"
+        rpy="0 0 0" />
+      <mass
+        value="0.0059141" />
+      <inertia
+        ixx="4.6268E-07"
+        ixy="2.255E-06"
+        ixz="-1.7058E-07"
+        iyy="1.2937E-05"
+        iyz="2.978E-08"
+        izz="1.3347E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/auxiliar_21_fixed_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0 0.1 0.9 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/auxiliar_21_fixed_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="auxiliar_21_fixed_joint"
+    type="fixed">
+    <origin
+      xyz="-0.004412503985045 0.152889046656648 0.0464499999999999"
+      rpy="-3.14159265358979 0 1.5707963267949" />
+    <parent
+      link="auxiliar_21_joint_link" />
+    <child
+      link="auxiliar_21_fixed_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="base_auxiliar_link">
+    <inertial>
+      <origin
+        xyz="0.037519 -0.060862 -0.027433"
+        rpy="0 0 0" />
+      <mass
+        value="0.2946" />
+      <inertia
+        ixx="0.00026764"
+        ixy="7.0796E-06"
+        ixz="2.8396E-06"
+        iyy="0.00023501"
+        iyz="-7.6901E-06"
+        izz="0.00026231" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/base_auxiliar_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0 0.1 0.9 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/base_auxiliar_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_auxiliar_joint"
+    type="fixed">
+    <origin
+      xyz="-0.03797 -0.028 0.09319"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="base_auxiliar_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="auxiliar_link">
+    <inertial>
+      <origin
+        xyz="-0.021626 0.064728 -0.0033124"
+        rpy="0 0 0" />
+      <mass
+        value="0.0061643" />
+      <inertia
+        ixx="1.2331E-05"
+        ixy="2.1233E-06"
+        ixz="-9.5672E-09"
+        iyy="6.6378E-07"
+        iyz="-1.6869E-09"
+        izz="1.297E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/auxiliar_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0 0.1 0.9 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/auxiliar_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="auxiliar_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0.00549999999999998"
+      rpy="0 0 0" />
+    <parent
+      link="base_auxiliar_link" />
+    <child
+      link="auxiliar_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="auxiliar_up_Link">
+    <inertial>
+      <origin
+        xyz="-0.068221 0.0018168 0.0033124"
+        rpy="0 0 0" />
+      <mass
+        value="0.0061643" />
+      <inertia
+        ixx="6.6378E-07"
+        ixy="2.1233E-06"
+        ixz="1.6869E-09"
+        iyy="1.2331E-05"
+        iyz="9.5672E-09"
+        izz="1.297E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/auxiliar_up_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0 0.1 0.9 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/auxiliar_up_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="auxiliar_up_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0234425039850326 0.132949046656649 0"
+      rpy="-3.14159265358979 0 1.5707963267949" />
+    <parent
+      link="auxiliar_link" />
+    <child
+      link="auxiliar_up_Link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="auxiliar_elbow_Link">
+    <inertial>
+      <origin
+        xyz="-0.005207 0.035772 0.013002"
+        rpy="0 0 0" />
+      <mass
+        value="0.018737" />
+      <inertia
+        ixx="6.5075E-06"
+        ixy="-4.326E-07"
+        ixz="2.3413E-07"
+        iyy="1.9605E-06"
+        iyz="-5.5505E-08"
+        izz="7.4895E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/auxiliar_elbow_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0 0.1 0.9 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/auxiliar_elbow_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="auxiliar_elbow"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="auxiliar_up_Link" />
+    <child
+      link="auxiliar_elbow_Link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="elbow_auxiliar_L4_fixed_link">
+    <inertial>
+      <origin
+        xyz="-0.013567 -0.034734 0.0075018"
+        rpy="0 0 0" />
+      <mass
+        value="0.018737" />
+      <inertia
+        ixx="6.5075E-06"
+        ixy="-4.326E-07"
+        ixz="2.3413E-07"
+        iyy="1.9605E-06"
+        iyz="-5.5505E-08"
+        izz="7.4895E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/elbow_auxiliar_L4_fixed_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0 0.1 0.9 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/elbow_auxiliar_L4_fixed_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="elbow_auxiliar_L4_fixed_joint"
+    type="fixed">
+    <origin
+      xyz="0.008360008797482 0.0705061008204682 0.00550000000000003"
+      rpy="0 0 0" />
+    <parent
+      link="auxiliar_elbow_Link" />
+    <child
+      link="elbow_auxiliar_L4_fixed_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="elbow_auxiliar_L4_link">
+    <inertial>
+      <origin
+        xyz="0.00037084 0.079608 0.0028609"
+        rpy="0 0 0" />
+      <mass
+        value="0.0063025" />
+      <inertia
+        ixx="1.6531E-05"
+        ixy="-7.6682E-08"
+        ixz="8.8519E-10"
+        iyy="7.0763E-08"
+        iyz="1.9002E-07"
+        izz="1.6548E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/elbow_auxiliar_L4_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0 0.1 0.9 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mk2/meshes/elbow_auxiliar_L4_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="elbow_auxiliar_L4_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0.00999999999999997"
+      rpy="0 0 0" />
+    <parent
+      link="elbow_auxiliar_L4_fixed_link" />
+    <child
+      link="elbow_auxiliar_L4_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+</robot>

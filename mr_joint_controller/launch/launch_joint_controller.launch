@@ -1,0 +1,5 @@
+<!-- Launch joint_controller_node -->
+<launch>
+    <node name="joint_controller_node" pkg="mr_joint_controller" type="joint_controller.py" output="screen">
+    </node>
+</launch>

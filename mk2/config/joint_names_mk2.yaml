@@ -1,0 +1,1 @@
+controller_joint_names: ['', 'base', 'L1', 'L2', 'L3_joint', 'auxiliar_2_joint', 'auxiliar_21_joint', 'auxiliar_joint', 'auxiliar_elbow', 'elbow_auxiliar_L4_joint', ]

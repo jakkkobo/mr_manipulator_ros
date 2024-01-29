@@ -1,0 +1,7 @@
+<!-- Launch file for mr_communication_node -->
+<launch>
+    <node name="mr_communication_node" pkg="mr_communication" type="serial_communication_node" output="screen">
+        <param name="port" value="/dev/ttyUSB0"/>
+        <param name="baudrate" value="115200"/>
+    </node>
+</launch>

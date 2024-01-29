@@ -1,0 +1,11 @@
+<!-- Including all the launch composing the mr packages -->
+
+<launch>
+    <!-- Launching all the nodes -->
+    <include file="$(find mk2)/launch/display.launch"/>
+    <include file="$(find mr_joint_controller)/launch/launch_joint_controller.launch"/>
+    <include file="$(find mr_waypoints)/launch/launch_waypoints.launch"/>
+    <include file="$(find mr_communication)/launch/launch_communication.launch"/>
+    <include file="$(find mr_dynamic)/launch/mr_dynamic_reconfigure.launch"/>
+    <include file="$(find mr_graphs)/launch/launch_graphs.launch"/> 
+</launch>
