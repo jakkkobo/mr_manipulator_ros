@@ -88,6 +88,9 @@ launch
 cd launch
 roslaunch bring_up_mk2.launch
 ````
+### Waypoints
+
+Create differente waypoints by editing the function ```makeWaypointGrid``` in the main loop [here](https://github.com/jakkkobo/mr_manipulator_ros/blob/21e4c9ee7073199c80ee446c30ccdef1eedf298c/mr_waypoints/src/waypoints_node.cpp).
 
 ### Dynamic Reconfigure Parameters
 
